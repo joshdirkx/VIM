@@ -91,4 +91,8 @@ let g:airline_powerline_fonts = 1
 
 "nerdTREE open with control + n
 map <C-n> :NERDTreeToggle<CR>
+"nerdTree open on right
+let g:NERDTreeWinPos = "right"
+
+
 execute pathogen#infect()
