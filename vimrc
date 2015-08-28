@@ -34,7 +34,7 @@ let g:ctrlp_map = '<c-p>'
 "ag for file search
 nnoremap f :Ag 
 
-"open nerdtree if no files are specified
+"open nerdtree if no files are specified on start
 "autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
