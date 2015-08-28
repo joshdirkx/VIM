@@ -44,7 +44,8 @@ set background=dark
 
 "set color scheme
 let g:solarized_termtrans = 1
-colorscheme solarized
+"colorscheme solarized
+colorscheme peaksea
 
 "airline customization
 let g:airline_theme            = 'solarized'
