@@ -1,56 +1,150 @@
 set nocompatible
+filetype off
 
-"enable constant and relative line numbers
-set relativenumber
-set number
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
 
-"leader set to ,
+" vundle is fundle
+Bundle 'gmarik/vundle'
+Bundle 'rking/ag.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'raimondi/delimitMate'
+Bundle 'shougo/neocomplete.vim'
+Bundle 'ervandew/supertab'
+Bundle 'scrooloose/syntastic'
+Bundle 'majutsushi/tagbar'
+Bundle 'bling/vim-airline'
+Bundle 'easymotion/vim-easymotion'
+Bundle 'tpope/vim-fugitive'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'jeetsukumaran/vim-filebeagle'
+Bundle 'tomtom/tcomment_vim'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-rails'
+Bundle 'skalnik/vim-vroom'
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-notes'
+
+" general
+syntax enable
+filetype plugin indent on
+set background=dark
+colorscheme josh
+" softtabs, 2 spaces
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set shiftround
+
+" backspace delete in insert
+set backspace=2
+
+" notes
+let g:notes_directories = ['~/Dropbox\ (Personal)/notes']
+let g:notes_suffic = '.txt'
+let g:notes_tab_indents = 0
+
+" index ctags
+map <leader>ct :!ctags -R .<CR>
+
+" always show cursor
+set ruler
+
+" 80 char column
+set textwidth=120
+set colorcolumn=+1
+
+" seperate vertical splits
+hi vertsplit guifg=fg guibg=bg
+
+" mapleader is now comma
 let mapleader=","
 
-"open ag.vim
-nnoremap <leader>a :Ag
+" hightlight current line
+set cursorline
+"set cursorcolumn
 
-"rebind escape to jk
-inoremap jk <esc>
+" no swp file
+set noswapfile
+let g:solarized_termtrans = 1
+let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
+set list
+set listchars=eol:¬,tab:\ \
 
-"move vertically by visual line
+" no more arrow keys
+for prefix in ['i', 'n', 'v']
+  for key in ['<Up>', '<Down>', '<Left>', '<Right>']
+    exe prefix . "noremap " . key . " <Nop>"
+  endfor
+endfor
+
+" no seriously, no arrows
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+
+" enable folding
+set foldmethod=indent
+set foldlevel=99
+
+" fold with spacebar
+nnoremap <space> za
+
+" new tab
+nmap <leader>t :tabnew<CR>
+nmap <leader>tc :tabclose<CR>
+
+" switch buffers
+nmap <leader>bn :bnext<CR>
+nmap <leader>bp :bprev<CR>
+
+" navigate multilines more naturally
 nnoremap j gj
 nnoremap k gk
 
-"hightlight current line
-set cursorline
+" escape is now jj
+inoremap jj <esc>
 
-"no swp file
-set noswapfile
+" wq with leader
+nmap <leader>w :w!<CR>
+nmap <leader>q :q!<CR>
+nmap <leader>wq :wq<CR>
 
-"fold options
-"enable folding
-set foldenable
-"open most folds by default
-set foldlevelstart=10
-"nested fold maximum
-set foldnestmax=10
-"open/close folds with space
-nnoremap <space> za
-"fold on indent
-set foldmethod=indent
+" set current line as absolute
+" relative based on current position
+set number
+set relativenumber
 
-syntax on
-filetype plugin indent on
-syntax enable
-set ts=2
-set et
-set sw=2
+" split right/below
+set splitbelow
+set splitright
 
-"toggle gundo.vim
-nnoremap <leader>u :GundoToggle<CR>
+" change panes with Ctrl + HJKL
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
-"toggle tagbar
-nmap <C-t> :TagbarToggle<CR>
-let g:tagbar_ctags_bin = '/usr/local/bin/ctags/'
+" split easier
+nmap <leader>vsp :vsp<CR>
+nmap <leader>hsp :sp<CR>
 
-"CtrlP settings
-let g:ctrlp_match_window = 'bottom,order:ttb'
+" format whole file
+nmap <leader>fef ggVG=
+
+" ag.vim
+nnoremap <leader>a :Ag 
+" airline
+set laststatus=2
+let g:airline_theme = 'bubblegum'
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#tabline#tab_nr_type = 2
+" ctrlp
+let g:ctrlp_match_window = 'bottom,order:btt'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
@@ -60,65 +154,23 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .DS_Store
       \ --ignore "**/*.pyc"
       \ -g ""'
-"map ctrl.p to Ctrl+P
 let g:ctrlp_map = '<c-p>'
-
-"open nerdtree if no files are specified on start
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-
-"tell vim to use 256 colors
-set t_Co=256
-set background=dark
-
-"set color scheme
-let g:solarized_termtrans = 1
-"colorscheme solarized
-colorscheme peaksea
-
-"airline customization
-let g:airline_theme            = 'solarized'
-let g:airline_enable_branch    = 1
-let g:airline_enable_syntastic = 1
-
-"allow mouse scrolling
-set mouse=a
-
-"make backspace work like everywhere else
-set backspace=indent,eol,start
-set expandtab
-set autoindent
-
-"search as characters are entered
-"begin search with /
-set incsearch
-"highlight matches
-set hlsearch
-"turn off search highlight with control + h
-map <C-h> :nohlsearch<CR>
-
-"csapprox setting for gui colorschemes
-let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
-
-"setting for airline
-set laststatus=2
-
-"uncomment the next line if you want to use powerline fonts with airline
-let g:airline_powerline_fonts = 1
-
-"fuzzy search for file using Unite
-"nnoremap f :Unite -start-insert file_rec
-
-"shortened Tabular alignment
-"nnoremap t :Tab /
-
-"start git commands with ,g
-"nnoremap g :Git 
-
-"nerdTREE open with control + n
-map <C-n> :NERDTreeToggle<CR>
-"nerdTree open on right
-let g:NERDTreeWinPos = "right"
-
-
-execute pathogen#infect()
+nnoremap <leader>. :CtrlPTag<cr>
+" neocomplete
+let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+" supertab
+let g:SuperTabDefaultCompletionType = "<c-n>"
+" syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = { 'mode': 'passive' }
+" vim.vroom
+nmap <leader>vr :VroomRunTestFile<CR>
