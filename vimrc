@@ -77,9 +77,9 @@ let g:solarized_termtrans = 1
 colorscheme peaksea
 
 "airline customization
-let g:airline_theme            = 'solarized'
-let g:airline_enable_branch    = 1
-let g:airline_enable_syntastic = 1
+let g:airline_theme            = 'base16'
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#syntastic#enabled = 1
 
 "allow mouse scrolling
 set mouse=a
@@ -113,7 +113,7 @@ let g:airline_powerline_fonts = 1
 "nnoremap t :Tab /
 
 "start git commands with ,g
-"nnoremap g :Git 
+nnoremap <leader>g :G
 
 "nerdTREE open with control + n
 map <C-n> :NERDTreeToggle<CR>
