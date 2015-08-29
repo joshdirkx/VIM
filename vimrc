@@ -1,5 +1,14 @@
 set nocompatible
 
+"leader set to ,
+let mapleader=","
+
+"open ag.vim
+nnoremap <leader>a :Ag
+
+"rebind escape to jk
+inoremap jk <esc>
+
 "move vertically by visual line
 nnoremap j gj
 nnoremap k gk
@@ -46,9 +55,6 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ -g ""'
 "map ctrl.p to Ctrl+P
 let g:ctrlp_map = '<c-p>'
-
-"ag for file search
-nnoremap f :Ag 
 
 "open nerdtree if no files are specified on start
 "autocmd StdinReadPre * let s:std_in=1
