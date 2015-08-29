@@ -42,6 +42,9 @@ set ts=2
 set et
 set sw=2
 
+"toggle gundo.vim
+nnoremap <leader>u :GundoToggle<CR>
+
 "toggle tagbar
 nmap <C-t> :TagbarToggle<CR>
 let g:tagbar_ctags_bin = '/usr/local/bin/ctags/'
