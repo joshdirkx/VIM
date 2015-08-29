@@ -6,6 +6,18 @@ set cursorline
 "no swp file
 set noswapfile
 
+"fold options
+"enable folding
+set foldenable
+"open most folds by default
+set foldlevelstart=10
+"nested fold maximum
+set foldnestmax=10
+"open/close folds with space
+nnoremap <space> za
+"fold on indent
+set foldmethod=indent
+
 syntax on
 filetype plugin indent on
 syntax enable
