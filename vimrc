@@ -1,5 +1,9 @@
 set nocompatible
 
+"enable constant and relative line numbers
+set relativenumber
+set number
+
 "leader set to ,
 let mapleader=","
 
@@ -73,9 +77,6 @@ colorscheme peaksea
 let g:airline_theme            = 'solarized'
 let g:airline_enable_branch    = 1
 let g:airline_enable_syntastic = 1
-
-"turn line numbers on
-set number
 
 "allow mouse scrolling
 set mouse=a
