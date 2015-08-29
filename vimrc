@@ -106,7 +106,7 @@ let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 
 "allow mouse scrolling
-set mouse=a
+"set mouse=a
 
 "make backspace work like everywhere else
 set backspace=indent,eol,start
@@ -143,6 +143,5 @@ nnoremap <leader>g :G
 map <C-n> :NERDTreeToggle<CR>
 "nerdTree open on right
 let g:NERDTreeWinPos = "right"
-
 
 execute pathogen#infect()
