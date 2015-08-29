@@ -1,7 +1,7 @@
 set nocompatible
 
 "unbind the cursor keys in insert, normal and visual modes.
-for prefix in ['i', 'n', 'v'
+for prefix in ['i', 'n', 'v']
   for key in ['<Up>', '<Down>', '<Left>', '<Right>']
     exe prefix . "noremap " . key . " <Nop>"
   endfor
