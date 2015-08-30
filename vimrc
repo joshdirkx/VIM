@@ -104,6 +104,9 @@ let g:solarized_termtrans = 1
 "colorscheme solarized
 colorscheme peaksea
 
+"neocomplete.vim
+let g:neocomplete#enable_at_startup = 1
+
 "airline customization
 let g:airline_theme            = 'base16'
 let g:airline#extensions#branch#enabled = 1
