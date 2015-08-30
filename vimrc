@@ -1,5 +1,9 @@
 set nocompatible
 
+"change eol character
+set list
+set listchars=eol:¬,tab:\ \
+
 "unbind the cursor keys in insert, normal and visual modes.
 for prefix in ['i', 'n', 'v']
   for key in ['<Up>', '<Down>', '<Left>', '<Right>']
