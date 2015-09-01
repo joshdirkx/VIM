@@ -34,6 +34,11 @@ nnoremap <leader>a :Ag
 "rebind escape to jk
 inoremap jk <esc>
 
+"rebind w, q, wq
+nmap <leader>w :w!<CR>
+nmap <leader>q :q!<CR>
+nmap <leader>wq :wq<CR>
+
 "move vertically by visual line
 nnoremap j gj
 nnoremap k gk
