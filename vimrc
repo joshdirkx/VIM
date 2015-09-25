@@ -1,7 +1,7 @@
 " + GENERAL -----------------------------------------------
 " + + COLORING --------------------------------------------
 "colorscheme peaksea
-colorscheme slate
+colorscheme railscasts
 set t_Co=256
 set background=dark
 let g:solarized_termtrans = 1
