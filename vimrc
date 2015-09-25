@@ -1,7 +1,7 @@
 " + GENERAL -----------------------------------------------
 " + + COLORING --------------------------------------------
-"colorscheme peaksea
-colorscheme railscasts
+colorscheme Tomorrow-Night-Eighties
+"colorscheme railscasts
 set t_Co=256
 set background=dark
 let g:solarized_termtrans = 1
@@ -11,8 +11,8 @@ set list
 set listchars=eol:¬,tab:\ \
 " + + FOLDING ---------------------------------------------
 set foldenable
-set foldlevelstart=10
-set foldnestmax=10
+"set foldlevelstart=10
+"set foldnestmax=10
 nnoremap <space> za
 set foldmethod=indent
 " + + MOVEMENT --------------------------------------------
@@ -101,6 +101,8 @@ let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeWinPos = "right"
+" + + PYTHON-MODE -----------------------------------------
+autocmd FileType python set colorcolumn=120
 " + + SUPERTAB --------------------------------------------
 " + + SYNTASTIC -------------------------------------------
 set statusline+=%#warningmsg#
