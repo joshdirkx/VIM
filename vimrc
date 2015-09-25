@@ -102,7 +102,7 @@ let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 map <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeWinPos = "right"
 " + + PYTHON-MODE -----------------------------------------
-autocmd FileType python set colorcolumn=120
+autocmd FileType python set colorcolumn=80
 " + + SUPERTAB --------------------------------------------
 " + + SYNTASTIC -------------------------------------------
 set statusline+=%#warningmsg#
