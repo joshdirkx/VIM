@@ -79,6 +79,7 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore "**/*.pyc"
       \ -g ""'
 let g:ctrlp_map = '<c-p>'
+nnoremap <leader>. :CtrlPTag<cr>
 " + + NEOCOMPLETE -----------------------------------------
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
