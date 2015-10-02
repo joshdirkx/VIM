@@ -34,9 +34,6 @@ let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 set list
 set listchars=eol:¬,tab:\ \
 
-" show tabline always
-set showtabline=2
-
 " no more arrow keys
 for prefix in ['i', 'n', 'v']
   for key in ['<Up>', '<Down>', '<Left>', '<Right>']
@@ -76,13 +73,15 @@ nmap <leader>hsp :sp<CR>
 " ag.vim
 nnoremap <leader>a :Ag
 " airline
+set laststatus=2
 let g:airline_theme = 'bubblegum'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
-set laststatus=2
-let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#tabline#tab_nr_type = 2
 " ctrlp
-let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_match_window = 'bottom,order:btt'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
@@ -106,6 +105,3 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_mode_map = { 'mode': 'passive' }
-" tagbar
-nmap <C-t> :TagbarToggle<CR>
-let g:tagbar_ctags_bin = '/usr/local/bin/ctags/'
