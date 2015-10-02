@@ -17,56 +17,71 @@ Bundle 'bling/vim-airline'
 Bundle 'easymotion/vim-easymotion'
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
-" + GENERAL -----------------------------------------------
-" + + COLORING --------------------------------------------
+" general
+syntax enable
+filetype plugin indent on
 colorscheme railscasts
+set tabstop=2
+set expandtab
+set shiftwidth=2
+let mapleader=","
+set cursorline
+set noswapfile
+set backspace=indent,eol,start
+set autoindent
 let g:solarized_termtrans = 1
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
-" + + END OF LINE -----------------------------------------
 set list
 set listchars=eol:¬,tab:\ \
-" + + MOVEMENT --------------------------------------------
+
+" show tabline always
+set showtabline=2
+
+" no more arrow keys
 for prefix in ['i', 'n', 'v']
   for key in ['<Up>', '<Down>', '<Left>', '<Right>']
     exe prefix . "noremap " . key . " <Nop>"
   endfor
 endfor
+
+" navigate multilines more naturally
 nnoremap j gj
 nnoremap k gk
-" + + MISC ------------------------------------------------
-syntax on
-filetype plugin indent on
-syntax enable
-set tabstop=2
-set expandtab
-set shiftwidth=2
-let mapleader=","
-set relativenumber
-set number
-set cursorline
-set noswapfile
-set backspace=indent,eol,start
-set autoindent
-set nowrap
-" + + REBINDINGS ------------------------------------------
-inoremap jk <esc>
+" escape is now jj
+inoremap jj <esc>
+" change to leader
 nmap <leader>w :w!<CR>
 nmap <leader>q :q!<CR>
 nmap <leader>wq :wq<CR>
-" + + SEARCH ----------------------------------------------
 set incsearch
 set hlsearch
-map <C-h> :nohlsearch<CR>
-" + PLUGINS -----------------------------------------------
-" + + AG --------------------------------------------------
+
+" set current line as absolute
+" relative based on current position
+set number
+set relativenumber
+
+" split right/below
+set splitbelow
+set splitright
+" change panes with Ctrl + HJKL
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+" split easier
+nmap <leader>vsp :vsp<CR>
+nmap <leader>hsp :sp<CR>
+
+" ag.vim
 nnoremap <leader>a :Ag
-" + + AIRLINE ---------------------------------------------
-let g:airline_theme            = 'base16'
+" airline
+let g:airline_theme = 'bubblegum'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 set laststatus=2
 let g:airline_powerline_fonts = 1
-" + + CTRLP -----------------------------------------------
+" ctrlp
 let g:ctrlp_match_window = 'bottom,order:ttb'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
@@ -79,18 +94,18 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ -g ""'
 let g:ctrlp_map = '<c-p>'
 nnoremap <leader>. :CtrlPTag<cr>
-" + + NEOCOMPLETE -----------------------------------------
+" neocomplete
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-" + + SUPERTAB --------------------------------------------
+" supertab
 let g:SuperTabDefaultCompletionType = "<c-n>"
-" + + SYNTASTIC -------------------------------------------
+" syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_mode_map = { 'mode': 'passive' }
-" + + TAGBAR ----------------------------------------------
+" tagbar
 nmap <C-t> :TagbarToggle<CR>
 let g:tagbar_ctags_bin = '/usr/local/bin/ctags/'
