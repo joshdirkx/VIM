@@ -17,6 +17,7 @@ Bundle 'bling/vim-airline'
 Bundle 'easymotion/vim-easymotion'
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
+
 " general
 syntax enable
 filetype plugin indent on
@@ -74,12 +75,10 @@ nnoremap k gk
 " escape is now jj
 inoremap jj <esc>
 
-" change to leader
+" wq with leader
 nmap <leader>w :w!<CR>
 nmap <leader>q :q!<CR>
 nmap <leader>wq :wq<CR>
-set incsearch
-set hlsearch
 
 " set current line as absolute
 " relative based on current position
@@ -89,11 +88,13 @@ set relativenumber
 " split right/below
 set splitbelow
 set splitright
+
 " change panes with Ctrl + HJKL
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
 " split easier
 nmap <leader>vsp :vsp<CR>
 nmap <leader>hsp :sp<CR>
