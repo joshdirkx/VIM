@@ -40,7 +40,6 @@ syntax enable
 set tabstop=2
 set expandtab
 set shiftwidth=2
-set nocompatible
 let mapleader=","
 set relativenumber
 set number
