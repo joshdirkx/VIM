@@ -31,11 +31,14 @@ set shiftround
 " backspace delete in insert
 set backspace=2
 
+" index ctags
+map <leader>ct :!ctags -R .<CR>
+
 " always show cursor
 set ruler
 
 " 80 char column
-set textwidth=80
+set textwidth=120
 set colorcolumn=+1
 
 " mapleader is now comma
