@@ -1,20 +1,30 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+" vundle is fundle
+Bundle 'gmarik/vundle'
+Bundle 'rking/ag.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'raimondi/delimitMate'
+Bundle 'shougo/neocomplete.vim'
+Bundle 'ervandew/supertab'
+Bundle 'scrooloose/syntastic'
+Bundle 'majutsushi/tagbar'
+Bundle 'bling/vim-airline'
+Bundle 'easymotion/vim-easymotion'
+Bundle 'tpope/vim-fugitive'
+Bundle 'airblade/vim-gitgutter'
 " + GENERAL -----------------------------------------------
 " + + COLORING --------------------------------------------
 colorscheme Tomorrow-Night-Eighties
-"colorscheme railscasts
-set t_Co=256
-set background=dark
 let g:solarized_termtrans = 1
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 " + + END OF LINE -----------------------------------------
 set list
 set listchars=eol:¬,tab:\ \
-" + + FOLDING ---------------------------------------------
-set foldenable
-"set foldlevelstart=10
-"set foldnestmax=10
-nnoremap <space> za
-set foldmethod=indent
 " + + MOVEMENT --------------------------------------------
 for prefix in ['i', 'n', 'v']
   for key in ['<Up>', '<Down>', '<Left>', '<Right>']
@@ -23,14 +33,13 @@ for prefix in ['i', 'n', 'v']
 endfor
 nnoremap j gj
 nnoremap k gk
-"set mouse=a
 " + + MISC ------------------------------------------------
 syntax on
 filetype plugin indent on
 syntax enable
-set tabstop=4
+set tabstop=2
 set expandtab
-set shiftwidth=4
+set shiftwidth=2
 set nocompatible
 let mapleader=","
 set relativenumber
@@ -39,6 +48,7 @@ set cursorline
 set noswapfile
 set backspace=indent,eol,start
 set autoindent
+set nowrap
 " + + REBINDINGS ------------------------------------------
 inoremap jk <esc>
 nmap <leader>w :w!<CR>
@@ -69,55 +79,18 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore "**/*.pyc"
       \ -g ""'
 let g:ctrlp_map = '<c-p>'
-" + + DELIMITMATE -----------------------------------------
-" + + EASYMOTION ------------------------------------------
-" + + FILEBEAGLE ------------------------------------------
-" + + FUGITIVE --------------------------------------------
-nnoremap <space>ga :Git add %:p<CR><CR>
-nnoremap <space>gs :Gstatus<CR>
-nnoremap <space>gc :Gcommit -v -q<CR>
-nnoremap <space>gt :Gcommit -v -q %:p<CR>
-nnoremap <space>gd :Gdiff<CR>
-nnoremap <space>ge :Gedit<CR>
-nnoremap <space>gr :Gread<CR>
-nnoremap <space>gw :Gwrite<CR><CR>
-nnoremap <space>gl :silent! Glog<CR>:bot copen<CR>
-nnoremap <space>gp :Ggrep<Space>
-nnoremap <space>gm :Gmove<Space>
-nnoremap <space>gb :Git branch<Space>
-nnoremap <space>go :Git checkout<Space>
-nnoremap <space>gps :Dispatch! git push<CR>
-nnoremap <space>gpl :Dispatch! git pull<CR>
-" + + GITGUTTER -------------------------------------------
-" + + GUNDO -----------------------------------------------
-nnoremap <leader>u :GundoToggle<CR>
 " + + NEOCOMPLETE -----------------------------------------
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-" + + NERDTREE --------------------------------------------
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-map <C-n> :NERDTreeToggle<CR>
-let g:NERDTreeWinPos = "right"
-" + + PYTHON-MODE -----------------------------------------
-autocmd FileType python set colorcolumn=80
 " + + SUPERTAB --------------------------------------------
+let g:SuperTabDefaultCompletionType = "<c-n>"
 " + + SYNTASTIC -------------------------------------------
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-" + + TABULAR ---------------------------------------------
-"nnoremap t :Tab /
+let g:syntastic_mode_map = { 'mode': 'passive' }
 " + + TAGBAR ----------------------------------------------
 nmap <C-t> :TagbarToggle<CR>
 let g:tagbar_ctags_bin = '/usr/local/bin/ctags/'
-" + + UNITE -----------------------------------------------
-"nnoremap f :Unite -start-insert file_rec
-" + PATHOGEN ----------------------------------------------
-execute pathogen#infect()
