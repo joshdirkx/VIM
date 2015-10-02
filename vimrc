@@ -19,7 +19,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 " + GENERAL -----------------------------------------------
 " + + COLORING --------------------------------------------
-colorscheme Tomorrow-Night-Eighties
+colorscheme railscasts
 let g:solarized_termtrans = 1
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 " + + END OF LINE -----------------------------------------
