@@ -21,14 +21,31 @@ Bundle 'airblade/vim-gitgutter'
 syntax enable
 filetype plugin indent on
 colorscheme railscasts
+
+" softtabs, 2 spaces
 set tabstop=2
-set expandtab
 set shiftwidth=2
+set expandtab
+set shiftround
+
+" backspace delete in insert
+set backspace=2
+
+" always show cursor
+set ruler
+
+" 80 char column
+set textwidth=80
+set colorcolumn=+1
+
+" mapleader is now comma
 let mapleader=","
+
+" hightlight current line
 set cursorline
+
+" no swp file
 set noswapfile
-set backspace=indent,eol,start
-set autoindent
 let g:solarized_termtrans = 1
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 set list
@@ -41,11 +58,19 @@ for prefix in ['i', 'n', 'v']
   endfor
 endfor
 
+" no seriously, no arrows
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+
 " navigate multilines more naturally
 nnoremap j gj
 nnoremap k gk
+
 " escape is now jj
 inoremap jj <esc>
+
 " change to leader
 nmap <leader>w :w!<CR>
 nmap <leader>q :q!<CR>
@@ -69,6 +94,9 @@ nnoremap <C-H> <C-W><C-H>
 " split easier
 nmap <leader>vsp :vsp<CR>
 nmap <leader>hsp :sp<CR>
+
+" format whole file
+nmap <leader>fef ggVG=
 
 " ag.vim
 nnoremap <leader>a :Ag
