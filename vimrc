@@ -17,6 +17,7 @@ Bundle 'bling/vim-airline'
 Bundle 'easymotion/vim-easymotion'
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'jeetsukumaran/vim-filebeagle'
 
 " general
 syntax enable
