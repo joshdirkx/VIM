@@ -22,8 +22,7 @@ Bundle 'jeetsukumaran/vim-filebeagle'
 " general
 syntax enable
 filetype plugin indent on
-colorscheme Tomorrow-Night-Eighties
-
+colorscheme apprentice
 " softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
