@@ -42,6 +42,9 @@ set ruler
 set textwidth=120
 set colorcolumn=+1
 
+" seperate vertical splits
+hi vertsplit guifg=fg guibg=bg
+
 " mapleader is now comma
 let mapleader=","
 
