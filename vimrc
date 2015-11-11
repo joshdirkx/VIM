@@ -22,7 +22,7 @@ Bundle 'jeetsukumaran/vim-filebeagle'
 " general
 syntax enable
 filetype plugin indent on
-colorscheme apprentice
+colorscheme Tomorrow-Night-Eighties
 " softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
@@ -50,6 +50,7 @@ let mapleader=","
 
 " hightlight current line
 set cursorline
+"set cursorcolumn
 
 " no swp file
 set noswapfile
@@ -70,6 +71,13 @@ nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
+
+" enable folding
+set foldmethod=indent
+set foldlevel=99
+
+" fold with spacebar
+nnoremap <space> za
 
 " navigate multilines more naturally
 nnoremap j gj
