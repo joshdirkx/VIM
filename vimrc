@@ -22,13 +22,13 @@ Bundle 'jeetsukumaran/vim-filebeagle'
 " general
 syntax enable
 filetype plugin indent on
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-set t_Co=256
+"let g:solarized_termtrans=1
+"let g:solarized_termcolors=256
+"set t_Co=256
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 "colorscheme railscasts
-"colorscheme Tomorrow-Night-Eighties
+colorscheme Tomorrow-Night-Eighties
 " softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
@@ -123,7 +123,7 @@ nmap <leader>fef ggVG=
 nnoremap <leader>a :Ag
 " airline
 set laststatus=2
-let g:airline_theme = 'solarized'
+let g:airline_theme = 'bubblegum'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
