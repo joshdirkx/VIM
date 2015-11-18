@@ -19,6 +19,9 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'jeetsukumaran/vim-filebeagle'
 Bundle 'tomtom/tcomment_vim'
+Bundle 'tpope/vim-endwise'
+Bundle 'tpope/vim-rails'
+Bundle 'skalnik/vim-vroom'
 
 " general
 syntax enable
@@ -85,6 +88,10 @@ set foldlevel=99
 
 " fold with spacebar
 nnoremap <space> za
+
+" new tab
+nnoremap <leader>t :tabnew<CR>
+nnoremap <leader>tc :tabclose<CR>
 
 " navigate multilines more naturally
 nnoremap j gj
