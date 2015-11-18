@@ -32,7 +32,7 @@ filetype plugin indent on
 set background=dark
 "colorscheme solarized
 "colorscheme railscasts
-colorscheme Tomorrow-Night-Eighties
+colorscheme Tomorrow-Night-Bright
 " softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
@@ -90,8 +90,12 @@ set foldlevel=99
 nnoremap <space> za
 
 " new tab
-nnoremap <leader>t :tabnew<CR>
-nnoremap <leader>tc :tabclose<CR>
+nmap <leader>t :tabnew<CR>
+nmap <leader>tc :tabclose<CR>
+
+" switch buffers
+nmap <leader>bn :bnext<CR>
+nmap <leader>bp :bprev<CR>
 
 " navigate multilines more naturally
 nnoremap j gj
