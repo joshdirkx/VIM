@@ -18,6 +18,7 @@ Bundle 'easymotion/vim-easymotion'
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'jeetsukumaran/vim-filebeagle'
+Bundle 'tomtom/tcomment_vim'
 
 " general
 syntax enable
