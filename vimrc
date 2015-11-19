@@ -101,6 +101,8 @@ nmap <leader>bp :bprev<CR>
 nnoremap j gj
 nnoremap k gk
 
+" vim testing
+nnoremap <leader>vr :VroomRunTestFile<CR>
 " escape is now jj
 inoremap jj <esc>
 
