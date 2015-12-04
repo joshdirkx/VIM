@@ -24,6 +24,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'skalnik/vim-vroom'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-notes'
+Bundle 'xolox/vim-easytags'
 
 " general
 syntax enable
@@ -45,7 +46,7 @@ let g:notes_suffic = '.txt'
 let g:notes_tab_indents = 0
 
 " index ctags
-map <leader>ct :!ctags -R .<CR>
+nmap <leader>ct :!ctags -R .<CR>
 
 " always show cursor
 set ruler
@@ -174,3 +175,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'passive' }
 " vim.vroom
 nmap <leader>vr :VroomRunTestFile<CR>
+" vim.easytags
+set tags=tags;/
+let g:easytags_dynamic_files = 1
+let g:easytags_events = ['BufWritePost']
