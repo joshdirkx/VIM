@@ -29,8 +29,9 @@ Bundle 'xolox/vim-easytags'
 " general
 syntax enable
 filetype plugin indent on
-set background=dark
-colorscheme josh
+"set background=dark
+"colorscheme josh
+colorscheme onedark
 " softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
@@ -115,7 +116,7 @@ nmap <leader>wq :wq<CR>
 " set current line as absolute
 " relative based on current position
 set number
-set relativenumber
+"set relativenumber
 
 " split right/below
 set splitbelow
