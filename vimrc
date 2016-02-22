@@ -24,7 +24,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'skalnik/vim-vroom'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-notes'
-Bundle 'xolox/vim-easytags'
+"Bundle 'xolox/vim-easytags'
 
 " general
 syntax enable
