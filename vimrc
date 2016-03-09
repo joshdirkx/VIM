@@ -24,7 +24,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'skalnik/vim-vroom'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-notes'
-"Bundle 'xolox/vim-easytags'
+Bundle 'shumphrey/fugitive-gitlab.vim'
 
 " general
 syntax enable
@@ -37,6 +37,11 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set shiftround
+
+" speed brah
+set ttyfast
+set ttyscroll=3
+set lazyredraw
 
 " backspace delete in insert
 set backspace=2
@@ -118,6 +123,10 @@ nmap <leader>wq :wq<CR>
 set number
 "set relativenumber
 
+" ctags
+nnoremap <leader>d <C-w><C-]><C-w>T
+"nnoremap <leader>d <C-]><CR>
+
 " split right/below
 set splitbelow
 set splitright
@@ -131,6 +140,10 @@ nnoremap <C-H> <C-W><C-H>
 " split easier
 nmap <leader>vsp :vsp<CR>
 nmap <leader>hsp :sp<CR>
+
+" resize splits
+nmap <leader>vsr :vertical resize 
+nmap <leader>hsr :resize 
 
 " format whole file
 nmap <leader>fef ggVG=
@@ -176,7 +189,5 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'passive' }
 " vim.vroom
 nmap <leader>vr :VroomRunTestFile<CR>
-" vim.easytags
-set tags=tags;/
-let g:easytags_dynamic_files = 1
-let g:easytags_events = ['BufWritePost']
+" fugitive-gitlab.vim
+let g:fugitive_gitlab_domains = ['http://git.truecarcorp.com']
