@@ -29,9 +29,10 @@ Bundle 'shumphrey/fugitive-gitlab.vim'
 " general
 syntax enable
 filetype plugin indent on
-"set background=dark
-"colorscheme josh
-colorscheme onedark
+set background=dark
+let g:solarized_termtrans = 1
+let g:solarized_termcolors=256
+colorscheme solarized
 " softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
@@ -73,7 +74,6 @@ set cursorline
 
 " no swp file
 set noswapfile
-let g:solarized_termtrans = 1
 let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 set list
 set listchars=eol:¬,tab:\ \
@@ -152,7 +152,7 @@ nmap <leader>fef ggVG=
 nnoremap <leader>a :Ag 
 " airline
 set laststatus=2
-let g:airline_theme = 'bubblegum'
+let g:airline_theme='solarized'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
