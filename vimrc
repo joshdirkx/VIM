@@ -122,7 +122,7 @@ nmap <leader>wq :wq<CR>
 " set current line as absolute
 " relative based on current position
 set number
-"set relativenumber
+set relativenumber
 
 " ctags
 nnoremap <leader>d <C-w><C-]><C-w>T
