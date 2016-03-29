@@ -119,6 +119,9 @@ nmap <leader>w :w!<CR>
 nmap <leader>q :q!<CR>
 nmap <leader>wq :wq<CR>
 
+" registers
+nmap <leader> "<CR>
+
 " set current line as absolute
 " relative based on current position
 set number
