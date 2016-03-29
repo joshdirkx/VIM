@@ -86,6 +86,9 @@ for prefix in ['i', 'n', 'v']
   endfor
 endfor
 
+"timelapse
+map <leader><leader>tl :call TimeLapse()<CR>
+
 " no seriously, no arrows
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
