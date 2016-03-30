@@ -26,6 +26,8 @@ Bundle 'skalnik/vim-vroom'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-notes'
 Bundle 'shumphrey/fugitive-gitlab.vim'
+Bundle 'kshenoy/vim-signature'
+Bundle 'coderifous/textobj-word-column.vim'
 
 " general
 syntax enable
