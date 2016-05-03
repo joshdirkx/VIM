@@ -33,9 +33,9 @@ Bundle 'coderifous/textobj-word-column.vim'
 syntax enable
 filetype plugin indent on
 set background=dark
-let g:solarized_termtrans = 1
-let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme vimbrant
+highlight ColorColumn ctermbg=7
+highlight ColorColumn guibg=Gray
 " softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
