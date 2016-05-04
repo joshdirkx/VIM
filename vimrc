@@ -28,6 +28,7 @@ Bundle 'xolox/vim-notes'
 Bundle 'shumphrey/fugitive-gitlab.vim'
 Bundle 'kshenoy/vim-signature'
 Bundle 'coderifous/textobj-word-column.vim'
+Bundle 'scrooloose/nerdtree'
 
 " general
 syntax enable
@@ -180,6 +181,9 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ -g ""'
 let g:ctrlp_map = '<c-p>'
 nnoremap <leader>. :CtrlPTag<cr>
+" nerdtree
+map <C-n> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
