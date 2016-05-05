@@ -63,7 +63,7 @@ nmap <leader>ct :!ctags -R .<CR>
 set ruler
 
 " 80 char column
-set textwidth=120
+set textwidth=79
 set colorcolumn=+1
 
 " seperate vertical splits
