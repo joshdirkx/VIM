@@ -120,6 +120,9 @@ nnoremap k gk
 " escape is now jj
 inoremap jj <esc>
 
+" opposite of shift j
+nnoremap K i<CR><Esc>
+
 " wq with leader
 nmap <leader>w :w!<CR>
 nmap <leader>q :q!<CR>
