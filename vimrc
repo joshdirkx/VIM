@@ -18,17 +18,16 @@ Bundle 'vim-airline/vim-airline-themes'
 Bundle 'easymotion/vim-easymotion'
 Bundle 'tpope/vim-fugitive'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'jeetsukumaran/vim-filebeagle'
 Bundle 'tomtom/tcomment_vim'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-vinegar'
 Bundle 'skalnik/vim-vroom'
 Bundle 'xolox/vim-misc'
 Bundle 'xolox/vim-notes'
 Bundle 'shumphrey/fugitive-gitlab.vim'
 Bundle 'kshenoy/vim-signature'
 Bundle 'coderifous/textobj-word-column.vim'
-Bundle 'scrooloose/nerdtree'
 
 " general
 syntax enable
