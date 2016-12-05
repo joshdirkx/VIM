@@ -6,28 +6,34 @@ call vundle#rc()
 
 " vundle is fundle
 Bundle 'gmarik/vundle'
+" fuzzy search
 Bundle 'rking/ag.vim'
+" fuzzy file finder
 Bundle 'kien/ctrlp.vim'
+" autocomplete for brackets, quotes etc
 Bundle 'raimondi/delimitMate'
+" keyword completion
 Bundle 'shougo/neocomplete.vim'
+" insert completions with tab
 Bundle 'ervandew/supertab'
+" syntax checker
 Bundle 'scrooloose/syntastic'
+" tags for classes, methods
 Bundle 'majutsushi/tagbar'
+" status bar
 Bundle 'bling/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
-Bundle 'easymotion/vim-easymotion'
+" git wrapper
 Bundle 'tpope/vim-fugitive'
+" show git changes on side
 Bundle 'airblade/vim-gitgutter'
-Bundle 'tomtom/tcomment_vim'
+" autocomplete blocks for ruby
 Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-rails'
+" - for jumping between files
 Bundle 'tpope/vim-vinegar'
-Bundle 'skalnik/vim-vroom'
-Bundle 'xolox/vim-misc'
-Bundle 'xolox/vim-notes'
-Bundle 'shumphrey/fugitive-gitlab.vim'
-Bundle 'kshenoy/vim-signature'
-Bundle 'coderifous/textobj-word-column.vim'
+
+" Delete if causes no problems, turned off 12/5
+"Bundle 'xolox/vim-misc'
 
 " general
 syntax enable
@@ -50,10 +56,8 @@ set lazyredraw
 " backspace delete in insert
 set backspace=2
 
-" notes
-let g:notes_directories = ['~/Dropbox\ (Personal)/notes']
-let g:notes_suffic = '.txt'
-let g:notes_tab_indents = 0
+" highlight search matches
+set hlsearch
 
 " index ctags
 nmap <leader>ct :!ctags -R .<CR>
@@ -87,9 +91,6 @@ for prefix in ['i', 'n', 'v']
     exe prefix . "noremap " . key . " <Nop>"
   endfor
 endfor
-
-"timelapse
-map <leader><leader>tl :call TimeLapse()<CR>
 
 " no seriously, no arrows
 nnoremap <Left> :echoe "Use h"<CR>
@@ -183,9 +184,6 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ -g ""'
 let g:ctrlp_map = '<c-p>'
 nnoremap <leader>. :CtrlPTag<cr>
-" nerdtree
-map <C-n> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
@@ -202,7 +200,3 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_mode_map = { 'mode': 'passive' }
-" vim.vroom
-nmap <leader>vr :VroomRunTestFile<CR>
-" fugitive-gitlab.vim
-let g:fugitive_gitlab_domains = ['http://git.truecarcorp.com']
