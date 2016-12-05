@@ -31,6 +31,8 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-endwise'
 " - for jumping between files
 Bundle 'tpope/vim-vinegar'
+" auto update tags after ctags -R .
+Bundle 'craigemery/vim-autotag'
 
 " Delete if causes no problems, turned off 12/5
 "Bundle 'xolox/vim-misc'

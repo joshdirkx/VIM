@@ -1,2 +1,4 @@
 /tags
 .netrwhist
+.DS_store
+*/.DS_Store
