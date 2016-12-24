@@ -57,9 +57,6 @@ set backspace=2
 " highlight search matches
 set hlsearch
 
-" index ctags
-nmap <leader>ct :!ctags -R .<CR>
-
 " always show cursor
 set ruler
 
@@ -73,9 +70,7 @@ hi vertsplit guifg=fg guibg=bg
 " mapleader is now comma
 let mapleader=","
 
-" hightlight current line
 set cursorline
-"set cursorcolumn
 
 " no swp file
 set noswapfile
@@ -126,17 +121,10 @@ nmap <leader>w :w!<CR>
 nmap <leader>q :q!<CR>
 nmap <leader>wq :wq<CR>
 
-" registers
-nmap <leader> "<CR>
-
 " set current line as absolute
 " relative based on current position
 set number
 set relativenumber
-
-" ctags
-nnoremap <leader>d <C-w><C-]><C-w>T
-"nnoremap <leader>d <C-]><CR>
 
 " split right/below
 set splitbelow
