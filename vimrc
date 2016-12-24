@@ -1,41 +1,37 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-
+call plug#begin()
 " vundle is fundle
-Bundle 'gmarik/vundle'
+Plug 'gmarik/vundle'
 " fuzzy search
-Bundle 'rking/ag.vim'
+Plug 'rking/ag.vim'
 " fuzzy file finder
-Bundle 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 " autocomplete for brackets, quotes etc
-Bundle 'raimondi/delimitMate'
+Plug 'raimondi/delimitMate'
 " keyword completion
-Bundle 'shougo/neocomplete.vim'
+Plug 'shougo/neocomplete.vim'
 " insert completions with tab
-Bundle 'ervandew/supertab'
+Plug 'ervandew/supertab'
 " syntax checker
-Bundle 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic'
 " tags for classes, methods
-Bundle 'majutsushi/tagbar'
+Plug 'majutsushi/tagbar'
 " status bar
-Bundle 'bling/vim-airline'
-Bundle 'vim-airline/vim-airline-themes'
+Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 " git wrapper
-Bundle 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 " show git changes on side
-Bundle 'airblade/vim-gitgutter'
+Plug 'airblade/vim-gitgutter'
 " autocomplete blocks for ruby
-Bundle 'tpope/vim-endwise'
+Plug 'tpope/vim-endwise'
 " - for jumping between files
-Bundle 'tpope/vim-vinegar'
+Plug 'tpope/vim-vinegar'
 " auto update tags after ctags -R .
-Bundle 'craigemery/vim-autotag'
-
-" Delete if causes no problems, turned off 12/5
-"Bundle 'xolox/vim-misc'
+Plug 'craigemery/vim-autotag'
+call plug#end()
 
 " general
 syntax enable
