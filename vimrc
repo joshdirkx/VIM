@@ -14,10 +14,6 @@ Plug 'raimondi/delimitMate'
 Plug 'shougo/neocomplete.vim'
 " insert completions with tab
 Plug 'ervandew/supertab'
-" syntax checker
-Plug 'scrooloose/syntastic'
-" tags for classes, methods
-Plug 'majutsushi/tagbar'
 " status bar
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -36,11 +32,7 @@ call plug#end()
 " general
 syntax enable
 filetype plugin indent on
-"set background=dark
 colorscheme vimbrant
-"highlight ColorColumn ctermbg=7
-"highlight ColorColumn guibg=Gray
-" softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -50,9 +42,6 @@ set shiftround
 set ttyfast
 set ttyscroll=3
 set lazyredraw
-
-" backspace delete in insert
-set backspace=2
 
 " highlight search matches
 set hlsearch
@@ -97,10 +86,6 @@ set foldlevel=99
 
 " fold with spacebar
 nnoremap <space> za
-
-" new tab
-nmap <leader>t :tabnew<CR>
-nmap <leader>tc :tabclose<CR>
 
 " switch buffers
 nmap <leader>bn :bnext<CR>
@@ -176,14 +161,3 @@ let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 " supertab
 let g:SuperTabDefaultCompletionType = "<c-n>"
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_mode_map = { 'mode': 'passive' }
-" tagbar
-nmap <leader>stb :TagbarToggle<CR>
