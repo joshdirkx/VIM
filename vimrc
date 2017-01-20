@@ -33,8 +33,12 @@ call plug#end()
 
 " general
 syntax enable
+set background=dark
+set t_Co=16
+"let g:solarized_termcolors=256
+set background=dark
+colorscheme solarized
 filetype plugin indent on
-colorscheme vimbrant
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -139,7 +143,7 @@ nmap <leader>fef ggVG=
 nnoremap <leader>a :Ag 
 " airline
 set laststatus=2
-let g:airline_theme='simple'
+let g:airline_theme='solarized'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
