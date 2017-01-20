@@ -25,10 +25,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-endwise'
 " - for jumping between files
 Plug 'tpope/vim-vinegar'
-" auto update tags after ctags -R .
-Plug 'craigemery/vim-autotag'
-" cURL
-Plug 'nicwest/QQ.vim'
 call plug#end()
 
 " general
