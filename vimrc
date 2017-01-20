@@ -104,6 +104,9 @@ inoremap jj <esc>
 " opposite of shift j
 nnoremap K i<CR><Esc>
 
+" open new tabs
+nmap <leader>tn :tabnew<CR>
+
 " wq with leader
 nmap <leader>w :w!<CR>
 nmap <leader>q :q!<CR>
