@@ -25,6 +25,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-endwise'
 " - for jumping between files
 Plug 'tpope/vim-vinegar'
+" rust syntax
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 " general
