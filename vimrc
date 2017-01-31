@@ -27,6 +27,8 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-vinegar'
 " rust syntax
 Plug 'rust-lang/rust.vim'
+" javascript
+Plug 'jelera/vim-javascript-syntax'
 call plug#end()
 
 " general
