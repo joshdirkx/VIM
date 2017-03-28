@@ -29,6 +29,9 @@ Plug 'tpope/vim-vinegar'
 Plug 'rust-lang/rust.vim'
 " javascript
 Plug 'jelera/vim-javascript-syntax'
+" go
+Plug 'fatih/vim-go'
+
 call plug#end()
 
 " general
