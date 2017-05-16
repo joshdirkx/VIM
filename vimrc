@@ -2,8 +2,6 @@ set nocompatible
 filetype off
 
 call plug#begin()
-" vundle is fundle
-Plug 'gmarik/vundle'
 " fuzzy search
 Plug 'rking/ag.vim'
 " fuzzy file finder
@@ -29,8 +27,6 @@ Plug 'tpope/vim-vinegar'
 Plug 'rust-lang/rust.vim'
 " javascript
 Plug 'jelera/vim-javascript-syntax'
-
-
 call plug#end()
 
 " general
@@ -166,6 +162,7 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore "**/*.pyc"
       \ -g ""'
 let g:ctrlp_map = '<c-p>'
+nnoremap <leader>. :CtrlPTag<cr>
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
