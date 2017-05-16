@@ -47,7 +47,10 @@ set ttyfast
 set ttyscroll=3
 set lazyredraw
 
-" highlight search matches
+" searching
+set ignorecase
+set smartcase
+set incsearch
 set hlsearch
 
 " always show cursor
