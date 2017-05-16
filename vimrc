@@ -34,7 +34,6 @@ syntax enable
 set background=dark
 set t_Co=16
 "let g:solarized_termcolors=256
-set background=dark
 colorscheme solarized
 filetype plugin indent on
 set tabstop=2
