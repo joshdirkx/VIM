@@ -2,8 +2,6 @@ set nocompatible
 filetype off
 
 call plug#begin()
-" vundle is fundle
-Plug 'gmarik/vundle'
 " fuzzy search
 Plug 'rking/ag.vim'
 " fuzzy file finder
@@ -29,7 +27,6 @@ Plug 'tpope/vim-vinegar'
 Plug 'rust-lang/rust.vim'
 " javascript
 Plug 'jelera/vim-javascript-syntax'
-
 call plug#end()
 
 " general
@@ -37,7 +34,6 @@ syntax enable
 set background=dark
 set t_Co=16
 "let g:solarized_termcolors=256
-set background=dark
 colorscheme solarized
 filetype plugin indent on
 set tabstop=2
@@ -51,7 +47,10 @@ set ttyfast
 set ttyscroll=3
 set lazyredraw
 
-" highlight search matches
+" searching
+set ignorecase
+set smartcase
+set incsearch
 set hlsearch
 
 " always show cursor
@@ -165,6 +164,7 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore "**/*.pyc"
       \ -g ""'
 let g:ctrlp_map = '<c-p>'
+nnoremap <leader>. :CtrlPTag<cr>
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
