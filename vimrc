@@ -42,6 +42,10 @@ set expandtab
 set shiftround
 set backspace=2
 
+" ctags
+set cscopetag
+set cscopetagorder=1
+
 " speed brah
 set ttyfast
 set ttyscroll=3
