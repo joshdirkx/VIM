@@ -27,6 +27,8 @@ Plug 'tpope/vim-vinegar'
 Plug 'rust-lang/rust.vim'
 " javascript
 Plug 'jelera/vim-javascript-syntax'
+" editorconfig
+Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 " general
