@@ -86,12 +86,6 @@ for prefix in ['i', 'n', 'v']
   endfor
 endfor
 
-" no seriously, no arrows
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
-
 " enable folding
 set foldmethod=indent
 set foldlevel=99
