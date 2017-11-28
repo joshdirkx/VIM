@@ -47,11 +47,6 @@ set backspace=2
 set cscopetag
 set cscopetagorder=1
 
-" speed brah
-set ttyfast
-set ttyscroll=3
-set lazyredraw
-
 " searching
 set ignorecase
 set smartcase
