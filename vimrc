@@ -115,6 +115,11 @@ nmap <leader>wq :wq<CR>
 set number
 set relativenumber
 
+" speed related
+set ttyfast
+set ttyscroll=3
+set lazyredraw
+
 " split right/below
 set splitbelow
 set splitright
