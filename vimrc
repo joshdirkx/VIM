@@ -151,7 +151,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tabs = 1
 let g:airline#extensions#tabline#tab_nr_type = 2
 " ctrlp
-let g:ctrlp_match_window = 'bottom,order:btt'
+let g:ctrlp_match_window = 'bottom,order:btt,min:0,max:5,results:5'
 let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
@@ -162,6 +162,8 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore "**/*.pyc"
       \ -g ""'
 let g:ctrlp_map = '<c-p>'
+"open with default as file search
+let g:ctrlp_by_filename = 1
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
