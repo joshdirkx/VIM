@@ -14,7 +14,6 @@ Plug 'shougo/neocomplete.vim'
 Plug 'ervandew/supertab'
 " status bar
 Plug 'bling/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 " git wrapper
 Plug 'tpope/vim-fugitive'
 " show git changes on side
@@ -113,7 +112,6 @@ nmap <leader>q :q!<CR>
 nmap <leader>wq :wq<CR>
 
 " set current line as absolute
-" relative based on current position
 set number
 
 " speed related
@@ -136,14 +134,14 @@ nmap <leader>vsp :vsp<CR>
 nmap <leader>hsp :sp<CR>
 
 " resize splits
-nmap <leader>vsr :vertical resize 
-nmap <leader>hsr :resize 
+nmap <leader>vsr :vertical resize
+nmap <leader>hsr :resize
 
-" format whole file
-nmap <leader>fef ggVG=
+"trailing whitespace
+autocmd BufWritePre * %s/\s\+$//e
 
 " ag.vim
-nnoremap <leader>a :Ag 
+nnoremap <leader>a :Ag
 " airline
 set laststatus=2
 let g:airline_theme='dracula'
@@ -164,7 +162,6 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore "**/*.pyc"
       \ -g ""'
 let g:ctrlp_map = '<c-p>'
-nnoremap <leader>. :CtrlPTag<cr>
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
