@@ -113,7 +113,6 @@ nmap <leader>wq :wq<CR>
 " set current line as absolute
 " relative based on current position
 set number
-set relativenumber
 
 " speed related
 set ttyfast
