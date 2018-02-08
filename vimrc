@@ -29,13 +29,15 @@ Plug 'rust-lang/rust.vim'
 Plug 'jelera/vim-javascript-syntax'
 " editorconfig
 Plug 'editorconfig/editorconfig-vim'
+" colors
+Plug 'dracula/vim'
 call plug#end()
 
 " general
 syntax enable
-set background=dark
-set t_Co=16
-colorscheme solarized
+"set background=dark
+"set t_Co=16
+color dracula
 filetype plugin indent on
 set tabstop=2
 set shiftwidth=2
@@ -144,7 +146,7 @@ nmap <leader>fef ggVG=
 nnoremap <leader>a :Ag 
 " airline
 set laststatus=2
-let g:airline_theme='solarized'
+let g:airline_theme='dracula'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
