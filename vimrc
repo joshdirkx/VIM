@@ -140,6 +140,9 @@ nmap <leader>hsr :resize
 "trailing whitespace
 autocmd BufWritePre * %s/\s\+$//e
 
+"autodetect *.conf syntax
+autocmd BufRead,BufNewFile *.conf setf dosini
+
 " ag.vim
 nnoremap <leader>a :Ag
 " airline
