@@ -35,7 +35,7 @@ call plug#end()
 " general
 syntax enable
 "set background=dark
-"set t_Co=16
+set t_Co=256
 color dracula
 filetype plugin indent on
 set tabstop=2
