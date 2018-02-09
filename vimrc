@@ -22,9 +22,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-endwise'
 " - for jumping between files
 Plug 'tpope/vim-vinegar'
-" rust syntax
+" syntax
+Plug 'w0rp/ale'
 Plug 'rust-lang/rust.vim'
-" javascript
 Plug 'jelera/vim-javascript-syntax'
 " editorconfig
 Plug 'editorconfig/editorconfig-vim'
@@ -143,13 +143,20 @@ autocmd BufWritePre * %s/\s\+$//e
 "autodetect *.conf syntax
 autocmd BufRead,BufNewFile *.conf setf dosini
 
+" ale
+let g:ale_lint_on_text_changed = 1
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+let g:ale_open_list = 1
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " ag.vim
 nnoremap <leader>a :Ag
 " airline
 set laststatus=2
 let g:airline_theme='dracula'
+let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#syntastic#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_tabs = 1
 let g:airline#extensions#tabline#tab_nr_type = 2
