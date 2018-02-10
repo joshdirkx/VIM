@@ -24,7 +24,6 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-vinegar'
 " syntax
 Plug 'w0rp/ale'
-Plug 'rust-lang/rust.vim'
 Plug 'jelera/vim-javascript-syntax'
 " editorconfig
 Plug 'editorconfig/editorconfig-vim'
