@@ -10,10 +10,8 @@ You'll need to correctly source your `.vimrc` to the one provided in this repo. 
 source ~/.vim/vimrc
 ```
 
-Launch vim and install with Vundle
+Launch vim and install with Plug
 ```install
 vim
-:BundleInstall
+:PlugInstall
 ```
-
-iTerm2 colorscheme is also included
