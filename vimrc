@@ -70,7 +70,6 @@ set cursorline
 
 " no swp file
 set noswapfile
-let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 set list
 set listchars=eol:¬,tab:\ \
 
@@ -80,13 +79,6 @@ for prefix in ['i', 'n', 'v']
     exe prefix . "noremap " . key . " <Nop>"
   endfor
 endfor
-
-" enable folding
-set foldmethod=indent
-set foldlevel=99
-
-" fold with spacebar
-nnoremap <space> za
 
 " switch buffers
 nmap <leader>bn :bnext<CR>
@@ -132,10 +124,6 @@ nnoremap <C-H> <C-W><C-H>
 nmap <leader>vsp :vsp<CR>
 nmap <leader>hsp :sp<CR>
 
-" resize splits
-nmap <leader>vsr :vertical resize
-nmap <leader>hsr :resize
-
 "trailing whitespace
 autocmd BufWritePre * %s/\s\+$//e
 
@@ -176,6 +164,7 @@ let g:ctrlp_by_filename = 1
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
+let g:neocomplete#max_list = 10
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 " rust.vim
