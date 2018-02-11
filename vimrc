@@ -131,6 +131,7 @@ autocmd BufWritePre * %s/\s\+$//e
 
 "autodetect *.conf syntax
 autocmd BufRead,BufNewFile *.conf setf dosini
+autocmd BufRead,BufNewFile *.json.jbuilder setf ruby
 
 " ale
 let g:ale_lint_on_text_changed = 1
