@@ -14,6 +14,8 @@ Plug 'shougo/neocomplete.vim'
 Plug 'ervandew/supertab'
 " status bar
 Plug 'bling/vim-airline'
+" tmux
+Plug 'edkolev/tmuxline.vim'
 " git wrapper
 Plug 'tpope/vim-fugitive'
 " show git changes on side
@@ -140,13 +142,10 @@ nmap <silent> <C-j> <Plug>(ale_next_wrap)
 " ag.vim
 nnoremap <leader>a :Ag
 " airline
-set laststatus=2
 let g:airline_theme='dracula'
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#show_tabs = 1
-let g:airline#extensions#tabline#tab_nr_type = 2
 " ctrlp
 let g:ctrlp_match_window = 'bottom,order:btt,min:0,max:5,results:5'
 let g:ctrlp_switch_buffer = 0
