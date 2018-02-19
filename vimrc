@@ -142,8 +142,6 @@ let g:ale_set_quickfix = 1
 let g:ale_open_list = 1
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
-" ag.vim
-nnoremap <leader>a :Ag
 " airline
 let g:airline_theme='dracula'
 let g:airline#extensions#ale#enabled = 1
