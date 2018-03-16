@@ -24,6 +24,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-endwise'
 " - for jumping between files
 Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-surround'
 " syntax
 Plug 'w0rp/ale'
 Plug 'jelera/vim-javascript-syntax'
@@ -31,6 +32,8 @@ Plug 'jelera/vim-javascript-syntax'
 Plug 'editorconfig/editorconfig-vim'
 " colors
 Plug 'dracula/vim'
+" alignment
+Plug 'junegunn/vim-easy-align'
 call plug#end()
 
 " general
@@ -161,6 +164,9 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
 let g:ctrlp_map = '<c-p>'
 "open with default as file search
 let g:ctrlp_by_filename = 1
+" easy align
+nmap ga <Plug>(EasyAlign)
+xmap ga <Plug>(EasyAlign)
 " neocomplete
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#enable_smart_case = 1
